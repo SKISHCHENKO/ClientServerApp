@@ -10,7 +10,7 @@ public class Server {
 
     public static void main(String[] args) {
         try(ServerSocket serverSocket = new ServerSocket(PORT)){
-            System.out.println("Сервер стартовал");
+            System.out.println("Server started");
             while(true){
                 try(Socket clientSocket = serverSocket.accept();
                     PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
